@@ -14,10 +14,10 @@ exports.help = () => {
 }
 
 exports.run = (api, event) => {
-  if (!this.config.count) {
-    this.config.count = 0;
+  if (!exports.config.count) {
+    exports.config.count = 0;
   }
-  this.config.count--;
+  exports.config.count--;
 
-  api.sendMessage("Death count at: " + this.config.count + "\n" + abuse[Math.floor(Math.random()*abuse.length)], event.thread_id);
+  api.sendMessage("Death count at: " + exports.config.count + "\n" + abuse[Math.floor(Math.random()*abuse.length)], event.thread_id);
 }
