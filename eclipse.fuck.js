@@ -5,15 +5,15 @@ let abuse = [
   "I got an error opening an error dialog"
 ]
 
-exports.match => (message, commandprefix) {
+exports.match = (message, commandprefix) => {
    return message.startsWith(commandprefix + "eclipse");
 }
 
-exports.help => () {
+exports.help = () => {
   return [[this.commandprefix + "eclipse", "Shows how much I hate eclipse", "fuck eclipse"]]
 }
 
-exports.run => (api, event) {
+exports.run = (api, event) => {
   if (!this.config.count) {
     this.config.count = 0;
   }
