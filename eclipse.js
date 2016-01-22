@@ -3,15 +3,15 @@ let abuse = [
   "Could not throw Intellij not found exception, how about we use eclipse instead?",
   "Eclipse shat the bed, so watch where you step.",
   "I got an error opening an error dialog"
-]
+];
 
 exports.match = (message, commandprefix) => {
    return message.startsWith(commandprefix + "eclipse");
-}
+};
 
 exports.help = () => {
-  return [[this.commandprefix + "eclipse", "Shows how much I hate eclipse", "fuck eclipse"]]
-}
+  return [[this.commandPrefix + "eclipse", "Shows how much I hate eclipse", "this could only end one way, eclipse"]]
+};
 
 exports.run = (api, event) => {
   if (!exports.config.count) {
@@ -20,4 +20,4 @@ exports.run = (api, event) => {
   exports.config.count--;
 
   api.sendMessage("Death count at: " + exports.config.count + "\n" + abuse[Math.floor(Math.random()*abuse.length)], event.thread_id);
-}
+};
