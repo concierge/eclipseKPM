@@ -9,8 +9,8 @@ exports.match = (message, commandprefix) => {
    return message.startsWith(commandprefix + "eclipse");
 };
 
-exports.help = () => {
-  return [[this.commandPrefix + "eclipse", "Shows how much I hate eclipse", "this could only end one way, eclipse"]]
+exports.help = (commandPrefix) => {
+  return [[commandPrefix + "eclipse", "Shows how much I hate eclipse", "this could only end one way, eclipse"]]
 };
 
 exports.run = (api, event) => {
