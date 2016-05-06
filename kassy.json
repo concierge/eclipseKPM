@@ -1,5 +1,7 @@
 {
   "name":"eclipseAbuse",
   "version":1.1,
-  "startup":"eclipse.js"
+  "startup":"eclipse.js",
+  "command":"eclipse",
+  "help":[["{{commandPrefix}}eclipse", "Shows how much I hate eclipse", "this could only end one way, eclipse"]]
 }
